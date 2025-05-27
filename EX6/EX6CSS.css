@@ -1,0 +1,351 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #eaeaea;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.promo-banner-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 70px;
+}
+
+
+header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    margin-left: 30px;
+}
+
+header ul li a {
+    display: inline-block;
+    padding: 10px 0;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444;
+    padding-bottom: 5px;
+}
+header ul > li > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-width: 220px;
+    z-index: 1005;
+    padding: 5px 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 1px;
+}
+header ul > li:hover > ul {
+    display: block;
+}
+header ul > li > ul > li {
+    margin-left: 0;
+    width: 100%;
+}
+header ul > li > ul > li > a {
+    display: block;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: none;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+header ul > li > ul > li > a:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+    header ul li a:hover {
+    color: #000;
+}
+
+header > img {
+    height: 38px;
+    width: auto;
+}
+
+.promo-banner-container {
+    width: 100%;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.promo-banner-container img {
+    width: 95%; /* Ảnh banner chiếm toàn bộ chiều rộng của container */
+    height: auto;
+    display: block;
+}
+
+/* Tiêu đề danh mục "ÁO XUÂN HÈ" (Nếu bạn thêm thẻ H2 như gợi ý) */
+.category-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    padding: 25px 40px 10px 40px; /* Điều chỉnh padding nếu cần */
+    margin: 0; /* Bỏ margin mặc định của h2 */
+}
+
+
+nav { /* Sub-navigation for product categories */
+    padding: 15px 40px 25px 40px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav ul li a {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555;
+}
+
+nav ul li a:hover {
+    color: #000;
+}
+
+/* Main Content Area (Products & Aside) */
+.main-content-area {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    gap: 30px;
+}
+
+.Lower-column {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các product-item xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các product-item */
+    justify-content: flex-start;
+}
+
+.product-item {
+    background-color: #f7f7f7; /* Nền cho card sản phẩm */
+    /* Để 4 item một hàng với gap 20px: (100% - (3 * 20px)) / 4 */
+    flex-basis: calc((100% - (3 * 20px)) / 4);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ededed;
+    /* padding: 10px; */ /* Bỏ padding ở đây nếu muốn ảnh chạm viền */
+    text-align: left; /* Căn trái nội dung trong card */
+}
+
+.product-item .product-brand { /* Chữ "Atino" trên sản phẩm */
+    font-size: 12px; /* Kích thước nhỏ hơn */
+    color: #555; /* Màu xám đậm */
+    padding: 8px 10px 0px 10px; /* Padding cho chữ "Atino" */
+    font-weight: bold;
+    text-align: left;
+}
+
+.product-item img {
+    width: 100%; /* Ảnh sản phẩm chiếm toàn bộ chiều rộng của card */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    /* Nếu muốn có khoảng trắng quanh ảnh trong card, bỏ background-color và thêm padding cho .product-item */
+    /* background-color: #fff; */ /* Nền trắng cho ảnh nếu cần */
+}
+
+.product-item h3 { /* Tên sản phẩm */
+    font-size: 13px;
+    font-weight: normal;
+    color: #333;
+    margin: 8px 10px 5px 10px; /* Margin quanh tên sản phẩm */
+    line-height: 1.4;
+    min-height: 36px; /* Giúp căn chỉnh nếu tên có 1 hoặc 2 dòng */
+}
+
+.product-item h4 { /* Giá sản phẩm */
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+    margin: auto 10px 10px 10px; /* Margin dưới và hai bên */
+}
+
+
+/* Aside (Sidebar) */
+aside {
+    width: 180px; /* Chiều rộng của khối cố định - bạn có thể điều chỉnh */
+    /* height: 150px; */ /* Chiều cao cố định nếu muốn thành hình vuông/chữ nhật cụ thể */
+    /* Hoặc để height tự động theo nội dung với min-height/max-height */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Bo tròn góc (tùy chọn) */
+    padding: 15px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15); /* Đổ bóng (tùy chọn) */
+
+    position: fixed;    /* !! Quan trọng: Cố định vị trí tương đối với viewport */
+    top: 50%;           /* !! Quan trọng: Đặt ở giữa theo chiều dọc của viewport */
+    transform: translateY(-50%); /* !! Quan trọng: Căn chỉnh chính xác vào giữa theo chiều dọc */
+    right: 20px;         /* !! Quan trọng: Cách mép trái của viewport 20px (gần thanh cuộn) */
+    /* Bạn có thể điều chỉnh giá trị này */
+    z-index: 1000;      /* !! Quan trọng: Đảm bảo nó nằm trên các phần tử khác */
+}
+
+/* Các mục li bên trong aside sẽ xếp chồng lên nhau theo mặc định */
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+}
+aside ul li:last-child {
+    margin-bottom: 0; /* Bỏ margin cho mục cuối */
+}
+
+aside ul li a {
+    font-size: 14px;
+    color: #333;
+    display: block; /* Để dễ click và style */
+    padding: 5px 0;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: #007bff; /* Màu khi hover (tùy chọn) */
+    text-decoration: underline;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 40px;
+    margin-top: 40px;
+    border-top: 1px solid #eaeaea;
+    background-color: #fdfdfd;
+}
+
+footer img {
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) { /* Điều chỉnh breakpoint nếu cần cho 4 sản phẩm */
+    .product-item {
+        /* 3 items per row */
+        flex-basis: calc((100% - (2 * 20px)) / 3);
+    }
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+    header ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:10px;
+    }
+    header ul li {
+        margin-left: 10px;
+    }
+
+    .promo-banner-container,
+    .category-title,
+    nav,
+    .main-content-area {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-content-area {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .product-item {
+        /* 2 items per row */
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        /* 1 item per row */
+        flex-basis: 100%;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    header ul li a {
+        font-size: 12px;
+    }
+    .promo-banner-container,
+    .category-title,
+    nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
