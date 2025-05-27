@@ -135,17 +135,16 @@ header > img {
     display: block;
 }
 
-/* Tiêu đề danh mục "ÁO XUÂN HÈ" (Nếu bạn thêm thẻ H2 như gợi ý) */
 .category-title {
     font-size: 24px;
     font-weight: bold;
     color: #000;
-    padding: 25px 40px 10px 40px; /* Điều chỉnh padding nếu cần */
-    margin: 0; /* Bỏ margin mặc định của h2 */
+    padding: 25px 40px 10px 40px;
+    margin: 0;
 }
 
 
-nav { /* Sub-navigation for product categories */
+nav {
     padding: 15px 40px 25px 40px;
 }
 
@@ -177,74 +176,66 @@ nav ul li a:hover {
     flex: 1;
     min-width: 0;
     display: flex;
-    flex-wrap: wrap; /* Cho phép các product-item xuống dòng */
-    gap: 20px; /* Khoảng cách giữa các product-item */
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: flex-start;
 }
 
 .product-item {
-    background-color: #f7f7f7; /* Nền cho card sản phẩm */
-    /* Để 4 item một hàng với gap 20px: (100% - (3 * 20px)) / 4 */
+    background-color: #f7f7f7;
     flex-basis: calc((100% - (3 * 20px)) / 4);
     display: flex;
     flex-direction: column;
     border: 1px solid #ededed;
-    /* padding: 10px; */ /* Bỏ padding ở đây nếu muốn ảnh chạm viền */
-    text-align: left; /* Căn trái nội dung trong card */
+    text-align: left;
 }
 
-.product-item .product-brand { /* Chữ "Atino" trên sản phẩm */
-    font-size: 12px; /* Kích thước nhỏ hơn */
-    color: #555; /* Màu xám đậm */
-    padding: 8px 10px 0px 10px; /* Padding cho chữ "Atino" */
+.product-item .product-brand {
+    font-size: 12px;
+    color: #555;
+    padding: 8px 10px 0px 10px;
     font-weight: bold;
     text-align: left;
 }
 
 .product-item img {
-    width: 100%; /* Ảnh sản phẩm chiếm toàn bộ chiều rộng của card */
-    height: auto; /* Giữ tỷ lệ ảnh */
-    /* Nếu muốn có khoảng trắng quanh ảnh trong card, bỏ background-color và thêm padding cho .product-item */
-    /* background-color: #fff; */ /* Nền trắng cho ảnh nếu cần */
+    width: 100%;
+    height: auto;
+
 }
 
-.product-item h3 { /* Tên sản phẩm */
+.product-item h3 {
     font-size: 13px;
     font-weight: normal;
     color: #333;
-    margin: 8px 10px 5px 10px; /* Margin quanh tên sản phẩm */
+    margin: 8px 10px 5px 10px;
     line-height: 1.4;
-    min-height: 36px; /* Giúp căn chỉnh nếu tên có 1 hoặc 2 dòng */
+    min-height: 36px;
 }
 
-.product-item h4 { /* Giá sản phẩm */
+.product-item h4 {
     font-size: 14px;
     font-weight: bold;
     color: #222;
-    margin: auto 10px 10px 10px; /* Margin dưới và hai bên */
+    margin: auto 10px 10px 10px;
 }
 
 
-/* Aside (Sidebar) */
 aside {
-    width: 180px; /* Chiều rộng của khối cố định - bạn có thể điều chỉnh */
-    /* height: 150px; */ /* Chiều cao cố định nếu muốn thành hình vuông/chữ nhật cụ thể */
-    /* Hoặc để height tự động theo nội dung với min-height/max-height */
+    width: 180px;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
-    border-radius: 8px; /* Bo tròn góc (tùy chọn) */
+    border-radius: 8px;
     padding: 15px;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.15); /* Đổ bóng (tùy chọn) */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.15);
 
-    position: fixed;    /* !! Quan trọng: Cố định vị trí tương đối với viewport */
-    top: 50%;           /* !! Quan trọng: Đặt ở giữa theo chiều dọc của viewport */
-    transform: translateY(-50%); /* !! Quan trọng: Căn chỉnh chính xác vào giữa theo chiều dọc */
-    right: 20px;         /* !! Quan trọng: Cách mép trái của viewport 20px (gần thanh cuộn) */
-    /* Bạn có thể điều chỉnh giá trị này */
-    z-index: 1000;      /* !! Quan trọng: Đảm bảo nó nằm trên các phần tử khác */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    z-index: 1000;
 }
 
-/* Các mục li bên trong aside sẽ xếp chồng lên nhau theo mặc định */
 aside ul {
     list-style: none;
     padding: 0;
@@ -252,22 +243,22 @@ aside ul {
 }
 
 aside ul li {
-    margin-bottom: 10px; /* Khoảng cách giữa các mục */
+    margin-bottom: 10px;
 }
 aside ul li:last-child {
-    margin-bottom: 0; /* Bỏ margin cho mục cuối */
+    margin-bottom: 0;
 }
 
 aside ul li a {
     font-size: 14px;
     color: #333;
-    display: block; /* Để dễ click và style */
+    display: block;
     padding: 5px 0;
     text-decoration: none;
 }
 
 aside ul li a:hover {
-    color: #007bff; /* Màu khi hover (tùy chọn) */
+    color: #007bff;
     text-decoration: underline;
 }
 
@@ -348,4 +339,129 @@ footer img {
         padding-left: 15px;
         padding-right: 15px;
     }
+    @media (max-width: 768px) {
+
+        /* Điều chỉnh Header trên Mobile */
+        header {
+            /* flex-direction: column; đã có từ trước */
+            /* gap: 10px; */
+            /* padding: 10px 20px; */
+            /* Các style này đảm bảo header vẫn sticky và có nền */
+            position: sticky;
+            top: 0;
+            background-color: #fff;
+            z-index: 1001;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Thanh tìm kiếm có thể cần điều chỉnh hoặc ẩn đi trên mobile */
+        header > img { /* Thanh tìm kiếm */
+            /* display: none; */ /* Ví dụ: Ẩn thanh tìm kiếm trên mobile */
+            /* Hoặc: */
+            /* width: 100%; */ /* Nếu muốn nó chiếm toàn bộ chiều rộng dưới logo/menu */
+            /* margin-top: 10px; */
+            height: 34px; /* Giảm chiều cao một chút */
+        }
+
+        /* Menu chính trên Mobile */
+        header > ul { /* ul cấp 1 */
+            flex-direction: column; /* Xếp các mục menu chính theo chiều dọc */
+            width: 100%; /* Chiếm toàn bộ chiều rộng của header */
+            align-items: flex-start; /* Căn các mục menu về bên trái */
+            /* gap: 0; */ /* Bỏ gap nếu có, dùng padding/border cho từng li */
+        }
+
+        header ul > li { /* li cấp 1 */
+            width: 100%; /* Mỗi mục menu chính chiếm toàn bộ chiều rộng */
+            margin-left: 0; /* Reset margin-left */
+            border-bottom: 1px solid #f0f0f0; /* Thêm đường kẻ phân cách giữa các mục */
+        }
+        header ul > li:last-child {
+            border-bottom: none; /* Bỏ đường kẻ cho mục cuối cùng */
+        }
+
+        header ul > li > a { /* Link menu cấp 1 */
+            display: block; /* Cho link chiếm toàn bộ chiều rộng của li */
+            padding: 12px 20px; /* Tăng padding cho dễ chạm */
+            /* font-size: 14px; */ /* Có thể tăng font-size một chút */
+        }
+
+        /* Menu con (dropdown) trên Mobile */
+        header ul > li > ul { /* ul cấp 2 - dropdown */
+            position: static; /* !! Quan trọng: Bỏ định vị absolute */
+            display: none;    /* Vẫn ẩn ban đầu, sẽ cần JS để toggle hoặc dựa vào :focus-within (hạn chế) */
+            width: 100%;
+            border: none; /* Bỏ border riêng của dropdown */
+            box-shadow: none; /* Bỏ box-shadow riêng */
+            padding: 0;
+            margin-top: 0; /* Bỏ margin-top */
+            background-color: #f9f9f9; /* Nền hơi khác để phân biệt với menu cha */
+        }
+
+        /* !! Kỹ thuật để mở dropdown bằng CSS khi focus (hạn chế, không phải lúc nào cũng hoạt động tốt)
+           Hoặc khi item cha được click (nếu thẻ a của cha trỏ đến # và dùng JS để preventDefault)
+           Nếu không có JS, hành vi "tap" để mở dropdown có thể không nhất quán. */
+        header ul > li:focus-within > ul {
+            /* display: block; */ /* Mở khi focus vào li cha hoặc một phần tử con bên trong */
+        }
+        /* Để thực sự "click to open" mà không điều hướng, bạn sẽ cần JS.
+           Ví dụ: người dùng tap vào "ÁO XUÂN HÈ", JS sẽ toggle class để hiển thị menu con.
+           Hiện tại, :hover sẽ không hoạt động. Trình duyệt mobile có thể cố gắng mô phỏng
+           :hover bằng cách tap lần đầu -> kích hoạt :hover (mở menu), tap lần nữa -> điều hướng.
+           Nhưng đây không phải là trải nghiệm tốt nhất. */
+
+
+        /* Nếu vẫn muốn giữ hiệu ứng :hover (có thể hoạt động khi tap trên một số thiết bị)
+           và muốn dropdown xuất hiện đúng vị trí: */
+        header ul > li:hover > ul {
+            /* position: static;  Vẫn giữ static để nó nằm trong luồng */
+            /* display: block; */ /* Sẽ hiển thị ngay bên dưới mục cha */
+        }
+
+
+        header ul > li > ul > li > a { /* Link menu con */
+            padding: 10px 20px 10px 35px; /* Thụt lề trái cho link menu con */
+            font-size: 13px;
+            /* background-color: #f9f9f9; */ /* Đã đặt ở ul con */
+        }
+        header ul > li > ul > li > a:hover {
+            background-color: #e9e9e9;
+        }
+
+
+        /* Điều chỉnh padding-top cho nội dung bên dưới header */
+        /* Chiều cao header trên mobile sẽ phụ thuộc vào số lượng mục menu chính,
+           vì chúng xếp dọc. Điều này làm cho việc đặt padding-top cố định khó khăn.
+           Nếu menu không quá dài, có thể ước lượng.
+           Nếu menu dài, tốt nhất là dùng JS để tính chiều cao header và đặt padding-top,
+           hoặc chấp nhận header che một phần nội dung ban đầu khi trang tải.
+        */
+        .promo-banner-container {
+            /* padding-top: ước lượng chiều cao header mới; */
+            /* Ví dụ, nếu header có logo + 4 mục menu chính + thanh search */
+            /* 36(logo) + 4*(12*2+14+1) + 34(search) + paddings/gaps ~ 200px */
+            /* Đây là một vấn đề với sticky header khi nội dung header thay đổi chiều cao động */
+            padding-top: 180px; /* !! Cần điều chỉnh RẤT CẨN THẬN hoặc tìm giải pháp khác */
+        }
+
+
+        /* Điều chỉnh khối Aside cố định bên phải (nếu có) */
+        aside {
+            /* display: none; */ /* Ví dụ: Ẩn khối aside trên mobile để tiết kiệm không gian */
+            /* Hoặc: */
+            width: auto; /* Cho phép nó co lại theo nội dung */
+            max-width: 120px; /* Giới hạn chiều rộng */
+            padding: 8px;
+            right: 10px;
+            top: auto; /* Bỏ căn giữa theo chiều dọc */
+            bottom: 10px; /* Đặt ở dưới cùng bên phải */
+            transform: none; /* Bỏ transform */
+        }
+        aside ul li a {
+            font-size: 12px;
+            padding: 3px 0;
+        }
+
+    } /* Kết thúc @media (max-width: 768px) */
+
 }
